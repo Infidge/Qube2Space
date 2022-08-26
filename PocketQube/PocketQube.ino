@@ -108,7 +108,7 @@ void loop() {
   myFile.println(" ppm");
   myFile.close();  
 
-  if (maxAlt > bmp.readAltitude(seaLevelPressure) && abs(1000-bmp.readAltitude(seaLevelPressure))<200 && !GPS)
+  if (maxAlt > 3000 && 1000 > bmp.readAltitude(seaLevelPressure) && !GPS)
    GPS = true;
    
   if (GPS){
